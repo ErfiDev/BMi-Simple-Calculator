@@ -1,7 +1,12 @@
 import React from 'react';
+import {useDispatch} from 'react-redux';
+import toggleAction from '../Action/toggleAction';
 
 
 const AppInfo = ()=>{
+
+    const dis = useDispatch();
+
     return(
         <div className="info-container">
             <h1>
@@ -14,8 +19,7 @@ const AppInfo = ()=>{
                 ></span>
             </h1>
 
-
-            <button className="start-btn">I'm Ready</button>
+            <button onClick={()=> dis(toggleAction())} className="start-btn">I'm Ready</button>
         </div>
     );
 }

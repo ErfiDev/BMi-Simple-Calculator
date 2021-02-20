@@ -13,7 +13,6 @@ class TypeWriter {
       const current = this.wordIndex % this.words.length;
       const fullTxt = this.words[current];
 
-      // Check if deleting
       if (this.isDeleting) {
         this.txt = fullTxt.substring(0, this.txt.length - 1);
       } else {
@@ -44,7 +43,6 @@ class TypeWriter {
   document.addEventListener("DOMContentLoaded", init);
 
   function init() {
-    console.log("dom initialais");
     const txtElement = document.querySelector(".txt-type");
     const words = JSON.parse(txtElement.getAttribute("data-words"));
     const wait = txtElement.getAttribute("data-wait");

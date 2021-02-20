@@ -1,5 +1,5 @@
 import React,{Fragment} from 'react';
-
+import {connect} from 'react-redux';
 import AppInfo from './Components/appInfo';
 import Calculator from './Components/Calculator';
 
@@ -17,4 +17,8 @@ class App extends React.Component
     }
 }
 
-export default App;
+const mapStateToProp = (state)=>{
+    return {state};
+};
+
+export default connect(mapStateToProp)(App);
