@@ -33,10 +33,10 @@ const Calculator = () => {
                 </div>
             </div>
 
-            <button>
+            <button id="calc-btn">
                 Calculate
                 &nbsp;
-                <CachedIcon fontSize="small" />
+                <CachedIcon fontSize="large" />
             </button>
         </div>
     );

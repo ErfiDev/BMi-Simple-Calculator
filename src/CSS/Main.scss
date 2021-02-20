@@ -89,6 +89,7 @@ $bc: "background-color";
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+        font-family: "Poppins" , sans-serif;
 
         input[type = "number"]
         {
@@ -98,6 +99,34 @@ $bc: "background-color";
         span{
             border-top-right-radius: 0;
             border-bottom-right-radius: 0;
+        }
+
+        #calc-btn{
+            width: 250px;
+            height: auto;
+            font-family: "Poppins" , sans-serif;
+            font-size: 25pt;
+            outline: none;
+            border: none;
+            border-radius: 2px;
+            #{$bc}: rgba(255, 255, 255, 0.13);
+            color: rgba(255, 255, 255, 0.788);
+            transition: all 0.5s ease;
+            position: relative;
+            &::after{
+                content: "";
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                height: 4px;
+                width: 100%;
+                transform: scaleX(0);
+                transition: all 0.7s ease;
+                #{$bc}: rgba(255, 255, 255, 0.247);
+            }
+            &:hover::after{
+                transform: scaleX(1);
+            }
         }
     }
 }

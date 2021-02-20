@@ -80,6 +80,7 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  font-family: "Poppins", sans-serif;
 }
 #root .calculator-container input[type=number] {
   width: 650px;
@@ -88,6 +89,33 @@
 #root .calculator-container span {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+}
+#root .calculator-container #calc-btn {
+  width: 250px;
+  height: auto;
+  font-family: "Poppins", sans-serif;
+  font-size: 25pt;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.13);
+  color: rgba(255, 255, 255, 0.788);
+  transition: all 0.5s ease;
+  position: relative;
+}
+#root .calculator-container #calc-btn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 4px;
+  width: 100%;
+  transform: scaleX(0);
+  transition: all 0.7s ease;
+  background-color: rgba(255, 255, 255, 0.247);
+}
+#root .calculator-container #calc-btn:hover::after {
+  transform: scaleX(1);
 }
 
 @keyframes startCalculator {
