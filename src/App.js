@@ -8,10 +8,10 @@ class App extends React.Component
 {
     render()
     {
+        let {toggle} = this.props.state;
         return(
             <Fragment>
-                <AppInfo />
-                <Calculator />
+                {toggle ? <Calculator /> : <AppInfo />}
             </Fragment>
         );
     }
