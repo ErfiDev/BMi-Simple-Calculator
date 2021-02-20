@@ -9,16 +9,55 @@
   height: 100vh;
   overflow: scroll;
   overflow-x: hidden;
-  background: linear-gradient(to right, #799F0C, #ACBB78);
+  background: linear-gradient(to right, #aa076b, #61045f);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 #root::-webkit-scrollbar {
-  width: 8px;
+  width: 12px;
 }
 #root::-webkit-scrollbar-track {
   background-color: none;
 }
 #root::-webkit-scrollbar-thumb {
   width: 100%;
-  border-radius: 4px;
-  background-color: white;
+  background-color: rgba(229, 233, 232, 0.397);
+}
+#root .info-container {
+  width: 75%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Poppins", sans-serif !important;
+}
+#root .info-container h1 {
+  text-align: left;
+  width: 100%;
+  margin-top: 25px;
+  color: rgba(255, 255, 255, 0.712);
+  font-size: 40pt;
+}
+#root .info-container .start-btn {
+  margin-bottom: 35px;
+  font-size: 20pt;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.068);
+  color: rgba(255, 255, 255, 0.658);
+  transition: all 0.7s ease;
+}
+#root .info-container .start-btn:hover {
+  color: rgba(255, 255, 255, 0.767);
+  background-color: rgba(255, 255, 255, 0.13);
+}
+#root .info-container .txt-type {
+  border-right: 0.2rem solid #777;
 }
