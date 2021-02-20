@@ -54,14 +54,24 @@ $bc: "background-color";
             border: none;
             outline: none;
             cursor: pointer;
-            border-radius: 25px;
             #{$bc}: rgba(255, 255, 255, 0.068);
             color: rgba(255, 255, 255, 0.658);
             transition: all .7s ease;
-            animation: start 1.4s ease-in;
-            &:hover{
-                color: rgba(255, 255, 255, 0.767);
-                #{$bc}: rgba(255, 255, 255, 0.13);
+            animation: start 2.5s ease-in;
+            position: relative;
+            &::after{
+                content: "";
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                height: 3px;
+                background-color: rgba(255, 255, 255, 0.534);
+                width: 100%;
+                transform: scaleX(0);
+                transition: all 0.7s ease;
+            }
+            &:hover::after{
+                transform: scaleX(1);
             }
         }
 

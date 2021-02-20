@@ -49,15 +49,25 @@
   border: none;
   outline: none;
   cursor: pointer;
-  border-radius: 25px;
   background-color: rgba(255, 255, 255, 0.068);
   color: rgba(255, 255, 255, 0.658);
   transition: all 0.7s ease;
-  animation: start 1.4s ease-in;
+  animation: start 2.5s ease-in;
+  position: relative;
 }
-#root .info-container .start-btn:hover {
-  color: rgba(255, 255, 255, 0.767);
-  background-color: rgba(255, 255, 255, 0.13);
+#root .info-container .start-btn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.534);
+  width: 100%;
+  transform: scaleX(0);
+  transition: all 0.7s ease;
+}
+#root .info-container .start-btn:hover::after {
+  transform: scaleX(1);
 }
 #root .info-container .txt-type {
   border-right: 0.2rem solid #777;
