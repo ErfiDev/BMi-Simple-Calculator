@@ -96,6 +96,9 @@ $bc: "background-color";
             width: 650px;
             font-size: 22pt;
         }
+        .input-group-text{
+            font-size: 18pt;
+        }
         span{
             border-top-right-radius: 0;
             border-bottom-right-radius: 0;
@@ -168,5 +171,84 @@ $bc: "background-color";
     100%{
         opacity: 1;
         transform: translateY(0px);
+    }
+}
+
+
+
+@media only screen and (max-width: 901px)
+{
+    .input{
+        width: 500px !important;
+    }
+
+    #h1-appinfo{
+        font-size: 25pt !important;
+    }
+}
+
+@media only screen and (max-width: 715px)
+{
+    .input{
+        width: 400px !important;
+        font-size: 17pt !important;
+    }
+
+    .input-group-text{
+        font-size: 16pt !important;
+    }
+}
+
+@media only screen and (max-width: 590px)
+{
+    .input{
+        width: 350px !important;
+    }
+}
+
+@media only screen and (max-width: 526px)
+{
+    .input{
+        width: 300px !important;
+        font-size: 15pt !important;
+    }
+
+    #h1-appinfo{
+        font-size: 20pt !important;
+    }
+}
+
+@media only screen and (max-width: 450px)
+{
+    .input{
+        width: 240px !important;
+        font-size: 14pt !important;
+    }
+
+    #h1-appinfo{
+        font-size: 16pt !important;
+    }
+}
+
+@media only screen and (max-width: 372px)
+{
+    .input{
+        width: 190px !important;
+        font-size: 13pt !important;
+    }
+}
+
+@media only screen and (max-width: 320px)
+{
+    #h1-appinfo{
+        font-size: 14pt !important;
+    }
+}
+
+@media only screen and (max-width: 312px)
+{
+    .input{
+        width: 140px !important;
+        font-size: 12pt !important;
     }
 }

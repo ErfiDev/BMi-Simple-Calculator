@@ -9,7 +9,7 @@ const AppInfo = ()=>{
 
     return(
         <div className="info-container">
-            <h1>
+            <h1 id="h1-appinfo">
                 bmi simple calculator <br />
 
                 <span
