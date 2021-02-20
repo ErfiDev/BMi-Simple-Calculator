@@ -46,7 +46,7 @@ $bc: "background-color";
         }
 
         .start-btn{
-            margin-bottom: 35px;
+            margin-bottom: 15px;
             font-size: 20pt;
             padding: 10px;
             padding-left: 30px;
@@ -58,6 +58,7 @@ $bc: "background-color";
             #{$bc}: rgba(255, 255, 255, 0.068);
             color: rgba(255, 255, 255, 0.658);
             transition: all .7s ease;
+            animation: start 1.4s ease-in;
             &:hover{
                 color: rgba(255, 255, 255, 0.767);
                 #{$bc}: rgba(255, 255, 255, 0.13);
@@ -67,5 +68,35 @@ $bc: "background-color";
         .txt-type{
             border-right: 0.2rem solid #777;
         }
+    }
+}
+
+
+
+
+@keyframes start{
+    0%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    20%{
+        opacity: .2;
+        transform: translateY(-40px);
+    }
+    40%{
+        opacity: .4;
+        transform: translateY(-30px);
+    }
+    60%{
+        opacity: .6;
+        transform: translateY(-20px);
+    }
+    80%{
+        opacity: .8;
+        transform: translateY(-10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
     }
 }

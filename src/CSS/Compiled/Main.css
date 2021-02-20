@@ -41,7 +41,7 @@
   font-size: 40pt;
 }
 #root .info-container .start-btn {
-  margin-bottom: 35px;
+  margin-bottom: 15px;
   font-size: 20pt;
   padding: 10px;
   padding-left: 30px;
@@ -53,6 +53,7 @@
   background-color: rgba(255, 255, 255, 0.068);
   color: rgba(255, 255, 255, 0.658);
   transition: all 0.7s ease;
+  animation: start 1.4s ease-in;
 }
 #root .info-container .start-btn:hover {
   color: rgba(255, 255, 255, 0.767);
@@ -60,4 +61,31 @@
 }
 #root .info-container .txt-type {
   border-right: 0.2rem solid #777;
+}
+
+@keyframes start {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  20% {
+    opacity: 0.2;
+    transform: translateY(-40px);
+  }
+  40% {
+    opacity: 0.4;
+    transform: translateY(-30px);
+  }
+  60% {
+    opacity: 0.6;
+    transform: translateY(-20px);
+  }
+  80% {
+    opacity: 0.8;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
