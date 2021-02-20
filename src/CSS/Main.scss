@@ -57,7 +57,7 @@ $bc: "background-color";
             #{$bc}: rgba(255, 255, 255, 0.068);
             color: rgba(255, 255, 255, 0.658);
             transition: all .7s ease;
-            animation: start 2.5s ease-in;
+            animation: start 1.7s ease-in;
             position: relative;
             &::after{
                 content: "";
@@ -81,10 +81,25 @@ $bc: "background-color";
     }
 
 
-    
+    .calculator-container{
+        width: 75%;
+        height: 85%;
+        #{$bc}: rgba(255, 255, 255, 0.541);
+        animation: startCalculator 1.2s ease-in-out;
+    }
 }
 
 
+@keyframes startCalculator{
+    0% {
+        -webkit-transform: scaleX(0.4);
+        transform: scaleX(0.4);
+    }
+    100% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }    
+}
 
 
 @keyframes start{

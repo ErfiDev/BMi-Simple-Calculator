@@ -52,7 +52,7 @@
   background-color: rgba(255, 255, 255, 0.068);
   color: rgba(255, 255, 255, 0.658);
   transition: all 0.7s ease;
-  animation: start 2.5s ease-in;
+  animation: start 1.7s ease-in;
   position: relative;
 }
 #root .info-container .start-btn::after {
@@ -72,7 +72,23 @@
 #root .info-container .txt-type {
   border-right: 0.2rem solid #777;
 }
+#root .calculator-container {
+  width: 75%;
+  height: 85%;
+  background-color: rgba(255, 255, 255, 0.541);
+  animation: startCalculator 1.2s ease-in-out;
+}
 
+@keyframes startCalculator {
+  0% {
+    -webkit-transform: scaleX(0.4);
+    transform: scaleX(0.4);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+}
 @keyframes start {
   0% {
     opacity: 0;

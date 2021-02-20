@@ -11,7 +11,7 @@ class App extends React.Component
         let {toggle} = this.props.state;
         return(
             <Fragment>
-                {toggle ? <Calculator /> : <AppInfo />}
+                {!toggle ? <AppInfo /> : <Calculator /> }
             </Fragment>
         );
     }
