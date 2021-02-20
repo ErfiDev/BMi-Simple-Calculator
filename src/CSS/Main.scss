@@ -82,10 +82,23 @@ $bc: "background-color";
 
 
     .calculator-container{
-        width: 75%;
-        height: 85%;
-        #{$bc}: rgba(255, 255, 255, 0.541);
+        width: 80%;
+        height: 100%;
         animation: startCalculator 1.2s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        input[type = "number"]
+        {
+            width: 650px;
+            font-size: 22pt;
+        }
+        span{
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
     }
 }
 

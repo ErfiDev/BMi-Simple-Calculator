@@ -4,6 +4,8 @@ import AppInfo from './Components/appInfo';
 import Calculator from './Components/Calculator';
 
 import "./CSS/Compiled/Main.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 class App extends React.Component
 {
     render()
