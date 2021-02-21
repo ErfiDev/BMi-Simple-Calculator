@@ -2,13 +2,12 @@ import React from 'react';
 import CachedIcon from '@material-ui/icons/Cached';
 import HeightIcon from '@material-ui/icons/Height';
 import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
-import {useDispatch , useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
 import {HeightAction , WeightAction} from '../Action/countAction';
+import calculateAction from '../Action/calculateAction';
 
 const Calculator = () => {
 
-    const weight = useSelector(state => state.weight);
-    const height = useSelector(state => state.height);
     const dis = useDispatch();
 
     return ( 
@@ -42,7 +41,7 @@ const Calculator = () => {
                 </div>
             </div>
 
-            <button id="calc-btn">
+            <button id="calc-btn" onClick={()=> dis(calculateAction())}>
                 Calculate
                 &nbsp;
                 <CachedIcon fontSize="large" />
