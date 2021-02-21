@@ -14,14 +14,15 @@ const Result = ({bmi , condition})=>{
                 </span>
             </h2>
 
-            {/* <button className="show-bmi-chart">
-                Show BMi Chart <VisibilityIcon fontSize="inherit" />
-            </button> */}
-
-            <Button variant="contained" color="primary" style={{fontFamily: "Poppins , sans-serif"}}>
+            <Button 
+                variant="contained" 
+                color="primary" 
+                style={{fontFamily: "Poppins , sans-serif"}}
+            >
                 Show BMi Chart
                     &nbsp;
                 <VisibilityIcon fontSize="small" />
+                
             </Button>
 
         </div>

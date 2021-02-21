@@ -229,6 +229,10 @@
   #h1-appinfo {
     font-size: 16pt !important;
   }
+
+  .bmi-result {
+    font-size: 15pt !important;
+  }
 }
 @media only screen and (max-width: 372px) {
   .input {
@@ -245,5 +249,12 @@
   .input {
     width: 140px !important;
     font-size: 12pt !important;
+  }
+}
+@media only screen and (max-width: 297px) {
+  .bmi-result span {
+    display: block !important;
+    text-align: center;
+    margin-top: 5px;
   }
 }
