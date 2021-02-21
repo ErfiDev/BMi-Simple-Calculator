@@ -11,10 +11,10 @@ const calculateAction = ()=>{
 
         let condition;
 
-        if(Num <= 18) condition = "blue"
-        if(Num > 18 && Num <= 24) condition = "green"
+        if(Num <= 18) condition = "#1866a7"
+        if(Num > 18 && Num <= 24) condition = "rgb(0, 206, 0)"
         if(Num > 24 && Num <= 29) condition = "yellow"
-        if(Num > 29) condition = "red"
+        if(Num > 29) condition = "#fa1a3f"
 
         const Final = {
             bmi: Num,
@@ -23,7 +23,7 @@ const calculateAction = ()=>{
 
 
 
-        await dispatch({type: "CALCULATE" , payload: Final});
+        await dispatch({type: "CALCULATE" , payload: [Final]});
     }
 }
 

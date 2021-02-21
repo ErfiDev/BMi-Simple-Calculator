@@ -128,21 +128,23 @@
 }
 #root .calculator-container #result {
   background-color: rgba(179, 179, 179, 0.096);
+  min-width: 60vw;
+  width: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  min-height: 150px;
+  min-height: 40vh;
   height: auto;
   color: rgba(255, 255, 255, 0.89);
   padding: 15px;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 #root .calculator-container #result .bmi-result {
-  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
 }
 #root .calculator-container #result .bmi-result span {
-  border: dashed 5px green;
+  border: dashed 5px #1866a7;
   padding-right: 10px;
   padding-left: 10px;
   transition: all 0.7s ease;
