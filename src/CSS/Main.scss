@@ -95,6 +95,11 @@ $bc: "background-color";
         {
             width: 650px;
             font-size: 22pt;
+            &:focus{
+                border: none !important;
+                outline: none !important;
+                box-shadow: none !important;
+            }
         }
         .input-group-text{
             font-size: 18pt;

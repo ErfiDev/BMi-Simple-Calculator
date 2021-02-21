@@ -86,6 +86,11 @@
   width: 650px;
   font-size: 22pt;
 }
+#root .calculator-container input[type=number]:focus {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
 #root .calculator-container .input-group-text {
   font-size: 18pt;
 }
