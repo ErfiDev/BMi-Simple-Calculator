@@ -9,22 +9,34 @@ $bc: "background-color";
 #root{
     width: 100vw;
     height: 100vh;
-    overflow: scroll;
-    overflow-x: hidden;
-    // background: linear-gradient(to right, #ACBB78 , #799F0C);
     background: linear-gradient(to right, #aa076b , #61045f);
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    &::-webkit-scrollbar{
-        width: 12px;
-    }
-    &::-webkit-scrollbar-track{
-        #{$bc}: none;
-    }
-    &::-webkit-scrollbar-thumb{
-        width: 100%;
-        #{$bc}: rgba(229, 233, 232, 0.397);
+    position: relative;
+
+    #chart-bmi{
+        #{$bc}: rgb(129, 129, 129);
+        z-index: 150;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        position: absolute;
+        transition: all 0.5s ease;
+        top: 0%;
+        right: 0%;
+        left: 0%;
+        bottom: 0%;
+        animation: Chart 0.7s ease-out;
+        .img-container{
+            width: 90%;
+            height: 80%;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
     }
 
 
@@ -177,6 +189,17 @@ $bc: "background-color";
     }    
 }
 
+@keyframes Chart{
+    0% {
+        -webkit-transform: scaleX(0.1);
+        transform: scaleX(0.1);
+    }
+    100% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }    
+}
+
 
 @keyframes start{
     0%{
@@ -204,8 +227,6 @@ $bc: "background-color";
         transform: translateY(0px);
     }
 }
-
-
 
 @media only screen and (max-width: 901px)
 {

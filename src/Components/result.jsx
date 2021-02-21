@@ -1,8 +1,13 @@
 import React from 'react';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import Button from '@material-ui/core/Button';
+import {useDispatch} from 'react-redux';
+import toggle from '../Action/toggleChartAction';
  
 const Result = ({bmi , condition})=>{
+    
+    const dis = useDispatch();
+
     return(
         <div id="result">
 
@@ -15,6 +20,7 @@ const Result = ({bmi , condition})=>{
             </h2>
 
             <Button 
+                onClick={()=> dis(toggle())}
                 variant="contained" 
                 color="primary" 
                 style={{fontFamily: "Poppins , sans-serif"}}
@@ -22,7 +28,7 @@ const Result = ({bmi , condition})=>{
                 Show BMi Chart
                     &nbsp;
                 <VisibilityIcon fontSize="small" />
-                
+
             </Button>
 
         </div>

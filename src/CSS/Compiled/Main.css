@@ -7,22 +7,34 @@
 #root {
   width: 100vw;
   height: 100vh;
-  overflow: scroll;
-  overflow-x: hidden;
   background: linear-gradient(to right, #aa076b, #61045f);
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  position: relative;
 }
-#root::-webkit-scrollbar {
-  width: 12px;
+#root #chart-bmi {
+  background-color: #818181;
+  z-index: 150;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  transition: all 0.5s ease;
+  top: 0%;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  animation: Chart 0.7s ease-out;
 }
-#root::-webkit-scrollbar-track {
-  background-color: none;
+#root #chart-bmi .img-container {
+  width: 90%;
+  height: 80%;
 }
-#root::-webkit-scrollbar-thumb {
+#root #chart-bmi .img-container img {
   width: 100%;
-  background-color: rgba(229, 233, 232, 0.397);
+  height: 100%;
 }
 #root .info-container {
   width: 75%;
@@ -154,6 +166,16 @@
   0% {
     -webkit-transform: scaleX(0.4);
     transform: scaleX(0.4);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+}
+@keyframes Chart {
+  0% {
+    -webkit-transform: scaleX(0.1);
+    transform: scaleX(0.1);
   }
   100% {
     -webkit-transform: scaleX(1);
