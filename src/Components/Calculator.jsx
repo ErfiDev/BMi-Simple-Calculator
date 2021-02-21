@@ -43,9 +43,9 @@ const Calculator = () => {
                 </div>
             </div>
 
-            {bmi.map(item => (
+            {/* {bmi.map(item => (
                 <Result bmi={item} />
-            ))}
+            ))} */}
 
             <button id="calc-btn" onClick={()=> dis(calculateAction())}>
                 Calculate
