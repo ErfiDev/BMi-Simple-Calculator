@@ -6,7 +6,9 @@ const calculateAction = ()=>{
         const meter = Math.pow(height , 2);
         const calculate = weight / meter;
 
-        await dispatch({type: "CALCULATE" , payload: [calculate]});
+        const Rounde = calculate.toFixed(2);
+
+        await dispatch({type: "CALCULATE" , payload: [Rounde]});
     }
 }
 

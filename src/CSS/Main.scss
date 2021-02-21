@@ -137,6 +137,35 @@ $bc: "background-color";
                 transform: scaleX(1);
             }
         }
+
+        #result{
+            #{$bc}: rgba(179, 179, 179, 0.096);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            min-height: 150px;
+            height: auto;
+            color: rgba(255, 255, 255, 0.89);
+            padding: 15px;
+            border-radius: 5px;
+
+            .bmi-result{
+                margin-bottom: 10px;
+
+                span{
+                    border: dashed 5px green;
+                    padding-right: 10px;
+                    padding-left: 10px;
+                    transition: all 0.7s ease;
+                    // &:hover{
+                    //     border: solid 5px green;
+                    // }
+                }
+            }
+
+        }
+
     }
 }
 

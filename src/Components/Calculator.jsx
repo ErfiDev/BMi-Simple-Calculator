@@ -2,12 +2,14 @@ import React from 'react';
 import CachedIcon from '@material-ui/icons/Cached';
 import HeightIcon from '@material-ui/icons/Height';
 import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
-import {useDispatch} from 'react-redux';
+import {useDispatch , useSelector} from 'react-redux';
 import {HeightAction , WeightAction} from '../Action/countAction';
 import calculateAction from '../Action/calculateAction';
+import Result from './result';
 
 const Calculator = () => {
 
+    const bmi = useSelector(state => state.Calculate);
     const dis = useDispatch();
 
     return ( 
@@ -40,6 +42,10 @@ const Calculator = () => {
                     />
                 </div>
             </div>
+
+            {bmi.map(item => (
+                <Result bmi={item} />
+            ))}
 
             <button id="calc-btn" onClick={()=> dis(calculateAction())}>
                 Calculate
