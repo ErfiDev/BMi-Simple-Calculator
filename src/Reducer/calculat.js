@@ -1,4 +1,4 @@
-function Calculate (state = {} , action)
+function Calculate (state = [] , action)
 {
     switch(action.type)
     {

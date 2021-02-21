@@ -14,7 +14,7 @@ const AppInfo = ()=>{
 
                 <span
                 class="txt-type"
-                data-wait="1000"
+                data-wait="500"
                 data-words='["Made by React js and Redux" , "Prepared by Erfan Hanifezade"]'
                 ></span>
             </h1>

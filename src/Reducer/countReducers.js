@@ -4,6 +4,9 @@ export const WeightReducer = (state = 0 , action)=>{
         case "WEIGHT_COUNT":
             return action.payload;
 
+        case "CLEAR":
+            return state = 0;
+
         default: return state;
     }
 }
@@ -13,6 +16,9 @@ export const HeightReducer = (state = 0 , action)=>{
     {
         case "HEIGHT_COUNT":
             return action.payload;
+
+        case "CLEAR":
+            return state = 0;
 
         default: return state;
     }
